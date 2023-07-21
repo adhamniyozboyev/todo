@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
-class SecondPage extends StatelessWidget {
+class SecondPage extends StatefulWidget {
+  static const String routeName = 'second';
   const SecondPage({super.key});
 
   @override
+  State<SecondPage> createState() => _SecondPageState();
+}
+
+class _SecondPageState extends State<SecondPage> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: Colors.white,
-        child: Column(
-          children: [Text('Welcome\n back')],
-        ),
+      body: ListView.builder(
+        itemBuilder: (context, index) => ListTile(),
       ),
     );
   }
